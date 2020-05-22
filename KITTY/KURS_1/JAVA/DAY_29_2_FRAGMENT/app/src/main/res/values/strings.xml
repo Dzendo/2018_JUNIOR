@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DAY_29_2_FRAGMENT</string>
+    <string name="Button1">Кура</string>
+    <string name="Button2">Собака</string>
+    <string name="Button3">Утка</string>
+
+    <string-array name="cats">
+        <item>Просто кот</item>
+        <item>Кура - рыжий кур</item>
+        <item>Собака болеет за Барселону</item>
+        <item>Утка выписывает Мурзилку</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

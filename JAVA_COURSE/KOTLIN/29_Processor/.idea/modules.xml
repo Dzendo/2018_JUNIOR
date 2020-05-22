@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Counter/Counter.iml" filepath="$PROJECT_DIR$/Counter/Counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Processor/Processor.iml" filepath="$PROJECT_DIR$/Processor/Processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleClock/SimpleClock.iml" filepath="$PROJECT_DIR$/SimpleClock/SimpleClock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimpleThreadManager/SimpleThreadManager.iml" filepath="$PROJECT_DIR$/SimpleThreadManager/SimpleThreadManager.iml" />
+    </modules>
+  </component>
+</project>

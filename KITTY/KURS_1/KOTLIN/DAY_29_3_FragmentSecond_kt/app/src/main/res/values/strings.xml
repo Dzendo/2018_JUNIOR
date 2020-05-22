@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DAY_29_3_Fragment_Kotlin</string>
+    <string name="Button1">Кура</string>
+    <string name="Button2">Собака</string>
+    <string name="Button3">Утка</string>
+
+    <string-array name="cats">
+        <item>Просто кот</item>
+        <item>Кура - рыжий кур</item>
+        <item>Собака болеет за Барселону</item>
+        <item>Утка выписывает Мурзилку</item>
+    </string-array>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DAY_08_01_Toast</string>
+    <string name="show_toast">Пора вставать! Утро!</string>
+</resources>

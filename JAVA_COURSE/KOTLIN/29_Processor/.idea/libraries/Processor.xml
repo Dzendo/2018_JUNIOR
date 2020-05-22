@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Processor">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Processor/dist/Processor.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,79 @@
+package edu.javacourse.init;
+ 
+public class InitField
+{
+    protected static String staticField;
+    protected String field;
+ 
+    // вызывается при загрузке класса в Java-машину
+    static {
+        staticField = "Static test";
+        System.out.println("Static init:" + staticField);
+    }
+ 
+    // вызывается при создании объекта
+    {
+        field = "Test";
+        System.out.println("Object init:" + field);
+    }
+ 
+    public static void main(String[] args)
+    {
+        InitField init1 = new InitField();
+        System.out.println(init1.field);
+ 
+        InitField init2 = new InitField();
+        System.out.println(init2.field);
+    }
+}
+
+package edu.javacourse.init;
+ 
+public class InitFieldTwo extends InitField
+{
+    static {
+        staticField = "Other static";
+        System.out.println("Static init two:" + staticField);
+    }
+ 
+    {
+        field = "Other";
+        System.out.println("Object init two:" + field);
+    }
+}
+
+package edu.javacourse.init;
+ 
+public class InitField
+{
+    protected static String staticField;
+    protected String field;
+ 
+    static {
+        staticField = "Static test";
+        System.out.println("Static init:" + staticField);
+    }
+ 
+    {
+        field = "Test";
+        System.out.println("Object init:" + field);
+    }
+ 
+    public static void main(String[] args)
+    {
+        InitFieldTwo init2 = new InitFieldTwo();
+        System.out.println(init2.field);
+    }
+}
+
+context.checking(new Expectations() {{
+  oneOf(subscriber).receive(message);
+  will(returnValue("Hello world"));
+}});
+
+context.checking(new Expectations() {
+  {
+    oneOf(subscriber).receive(message);
+    will(returnValue("Hello world"));
+  }
+});

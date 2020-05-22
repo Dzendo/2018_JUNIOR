@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ObjectQueue">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/ObjectQueue.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

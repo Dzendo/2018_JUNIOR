@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Этот файл говорит, что в альбомной ориентации
+ вместо ресурса activity_main следует подключать ресурс
+ layout/activity_main_wide  типа ссылки
+ лежать должен в папке values-land values-720dp итд-->
+<resources>
+    <item name="activity_main" type="layout">@layout/activity_main_wide
+    </item>
+</resources>

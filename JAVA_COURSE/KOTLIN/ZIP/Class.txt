@@ -1,0 +1,139 @@
+
+package edu.javacourse.many;
+
+public class ResearchClass
+{
+    private class InternalOne {
+    }
+
+    protected class InternalTwo {
+    }
+
+    class InternalThree {
+    }
+
+    public class InternalFour {
+    }
+    
+    static private class InternalStaticOne {
+    }
+
+    static protected class InternalStaticTwo {
+    }
+
+    static class InternalStaticThree {
+    }
+
+    static public class InternalStaticFour {
+    }
+    
+    public void testInternal() {
+        InternalOne inOne = new InternalOne();
+        InternalTwo inTwo = new InternalTwo();
+        InternalThree inThree = new InternalThree();
+        InternalFour inFour = new InternalFour();
+        
+        InternalStaticOne inStOne = new InternalStaticOne();
+        InternalStaticTwo inStTwo = new InternalStaticTwo();
+        InternalStaticThree inStThree = new InternalStaticThree();
+        InternalStaticFour inStFour = new InternalStaticFour();
+    }
+}
+
+package edu.javacourse.many;
+
+import edu.javacourse.many.ResearchClass.InternalThree;
+
+public class FirstClass
+{
+
+    public void testInternal() {
+        ResearchClass.InternalStaticTwo inStTwo = new ResearchClass.InternalStaticTwo();
+        ResearchClass.InternalStaticThree inStThree = new ResearchClass.InternalStaticThree();
+        ResearchClass.InternalStaticFour inStFour = new ResearchClass.InternalStaticFour();
+    }
+}
+
+package edu.javacourse.one;
+
+import edu.javacourse.many.ResearchClass;
+
+public class SecondClass
+{
+
+    public void testInternal() {
+        ResearchClass.InternalStaticFour inStFour = new ResearchClass.InternalStaticFour();
+    }
+}
+
+package edu.javacourse.many;
+ 
+public class ThirdClass
+{
+ 
+    public void testInternal() {
+        class TestInternal
+        {
+        }
+ 
+        TestInternal ti = new TestInternal();
+    }
+}
+
+package edu.javacourse.frame;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class HelloFrame extends JFrame
+{
+    public HelloFrame() {
+        JButton btn = new JButton("Say 'Hello'");
+        
+        // Вот наш пример анонимного класса
+        btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                System.out.println("Hello, world");
+            }
+        });
+
+        // Кладем кнопку на СЕВЕР
+        add(btn, BorderLayout.NORTH);
+        // Задаем размеры формы
+        setBounds(100, 100, 200, 100);
+        // Устанавливаем свойство для закрытия приложения
+        // при закрытии формы
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // Делаем форму выидимой
+        setVisible(true);
+    }
+    
+    public static void main(String[] args)
+    {
+        HelloFrame hf = new HelloFrame();
+    }
+}
+
+package edu.javacourse.abs;
+ 
+public abstract class SimpleAbstract
+{
+    public void sayHello() {
+        System.out.println("HELLO");
+    }
+}
+
+package edu.javacourse.abs;
+ 
+public class StartClass
+{
+    public static void main(String[] args) {
+        SimpleAbstract sa = new SimpleAbstract() {};
+        sa.sayHello();
+    }
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hello_blank_fragment" />
+
+    <EditText
+        android:id="@+id/txt_yourName"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionSearch"
+        android:layout_marginTop="100dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/editGo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionGo"
+        android:layout_marginTop="150dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/editSend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionSend"
+        android:layout_marginTop="200dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/editNext"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="250dp"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/editDone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionDone"
+        android:layout_marginTop="300dp"
+        android:singleLine="true" />
+
+</FrameLayout>

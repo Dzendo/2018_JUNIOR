@@ -1,0 +1,5 @@
+Замените пути на такие, которые соответствуют расположению файлов на вашем компьютере и запустите из командной строки.
+
+Пример командной строки (это всё одна строка, без переносов):
+
+D:\Util\Compilers\MinGW\bin\g++ -ID:\Util\Java\jdk1.6.0_03\bin\include -ID:\Util\Java\jdk1.6.0_03\bin\include\win32 -O3 example_Multiply.cc -shared -o CPP_MultiplyLibrary2.dll -Xlinker --add-stdcall-alias

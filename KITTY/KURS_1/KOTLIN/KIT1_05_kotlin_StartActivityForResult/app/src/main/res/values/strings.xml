@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KIT1_05_kotlin_StartActivityForResult</string>
+    <string name="app_name_1">Шерлок</string>
+    <string name="who">Кто украл два кусочека колбаски?</string>
+</resources>

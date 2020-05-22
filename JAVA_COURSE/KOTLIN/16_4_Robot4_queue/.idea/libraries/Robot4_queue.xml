@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Robot4_queue">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Robot4_queue.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

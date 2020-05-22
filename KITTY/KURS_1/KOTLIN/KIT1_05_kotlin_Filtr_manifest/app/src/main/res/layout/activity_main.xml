@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:onClick="onClick"
+        android:text="@string/about_title"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_birthay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Send_button"
+        style="@style/BATON" />
+
+    <Button
+        android:id="@+id/button_birthay"
+        android:onClick="onClickBirthday"
+        android:text="@string/birthday_title"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        style="@style/BATON" />
+
+    <EditText
+        android:id="@+id/adress_text"
+        style="@style/BATON"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Второе окно"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/letter_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <EditText
+        android:id="@+id/letter_text"
+        style="@style/BATON"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Привет от Первого окна "
+        app:layout_constraintBottom_toTopOf="@+id/Send_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adress_text" />
+
+    <Button
+        android:id="@+id/Send_button"
+        android:onClick="OnClick_Send"
+        style="@style/BATON"
+        android:text="@string/Send_button"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/letter_text"
+         />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/BATON"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="152dp"
+        android:onClick="onFilter"
+        android:stateListAnimator="@drawable/ic_add_alert_black_24dp"
+        android:text="Filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_birthay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

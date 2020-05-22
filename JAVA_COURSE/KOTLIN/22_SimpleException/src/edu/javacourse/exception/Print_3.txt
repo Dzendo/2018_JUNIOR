@@ -1,0 +1,87 @@
+package edu.javacourse.exception;
+
+public class Generator
+{
+    // Данный метод описан с указанием того, что он способен кинуть 
+    // исключение типа SimpleException
+    public String helloMessage(String name) throws SimpleException
+    {
+        if (name == null) {
+            // Мы должны сначала создать объект-исключение
+            SimpleException se = new SimpleException(10, "Message is null");
+            // Теперь мы можем "кинуть" это исключение - это другой способ выйти
+            // из метода - отличный от варианта с return
+            throw se;
+            
+            // Можно совместить создание и кидание - можете закомментировать
+            // предыдущие строки и использовать нижеприведенную
+            // throw new SimpleException(10, "Message is null");
+        }
+        return "Hello, " + name;
+    }
+}
+
+package edu.javacourse.exception;
+
+public class SimpleException extends Exception
+{
+    // Это наше поле для хранения информации, присущей данному
+    // классу-исключению. Поле немножко надуманное, но здесь может быть
+    // и достаточно важная информация
+    private int errorCode;
+
+    // переопределяем конструктор
+    public SimpleException(String message)
+    {
+        this(0, message);
+    }
+
+    // Создаем свой конструктор
+    public SimpleException(int errorCode, String message)
+    {
+        // Вызываем конструктор предка
+        super(message);
+        // Добравляем инициализацию своего поля
+        this.errorCode = errorCode;
+    }
+
+    // Метод для получения кода ошибки
+    public int getErrorCode()
+    {
+        return errorCode;
+    }
+}
+
+package edu.javacourse.exception;
+
+public class Starter
+{
+    public static void main(String[] args)
+    {
+        // создаем наш класс для генерации исключений
+        Generator generator = new Generator();
+        
+        // Данный блок будет обрабатывать исключение
+        // и оно там действительно возникнет - мы же передали null
+        try {
+            String answer = generator.helloMessage(null);
+            System.out.println("Answer 1:" + answer);
+        } catch (SimpleException ex) {
+            // Здесь мы можем обработать объект-исключение,
+            // получить некоторую информаицию
+            System.out.println("Error code:" + ex.getErrorCode());
+            System.out.println("Error message:" + ex.getMessage());
+        }
+
+        // Данный блок будет обрабатывать исключение
+        // но его не будет - мы передали корректный параметр
+        try {
+            String answer = generator.helloMessage("Yoda");
+            System.out.println("Answer 2:" + answer);
+        } catch (SimpleException ex) {
+            // Здесь мы можем обработать объект-исключение,
+            // получить некоторую информаицию
+            System.out.println("Error:" + ex.getMessage());
+        }
+    }
+}

@@ -1,0 +1,112 @@
+package edu.javacourse.exception;
+ 
+public class Generator
+{
+    public String helloMessage(String name) throws FirstException, SecondException
+    {
+        if ("FIRST".equals(name)) {
+            throw new FirstException("FirstException occured");
+        }
+        if("SECOND".equals(name)) {
+            throw new SecondException("SecondException occured");
+        }
+        return "Hello, " + name;
+    }
+}
+
+package edu.javacourse.exception;
+ 
+public class Starter
+{
+    public static void main(String[] args)
+    {
+        Generator generator = new Generator();
+        
+        try {
+            String answer = generator.helloMessage("FIRST");
+            //String answer = generator.helloMessage("SECOND");
+            //String answer = generator.helloMessage("OTHER");
+            System.out.println("Answer 1:" + answer);
+        } catch (FirstException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (SecondException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        }
+    }
+}
+
+package edu.javacourse.exception;
+ 
+public class FirstException extends Exception
+{
+    public FirstException(String message)
+    {
+        super(message);
+    }
+}
+
+package edu.javacourse.exception;
+ 
+public class Starter
+{
+    public static void main(String[] args)
+    {
+        Generator generator = new Generator();
+        
+        try {
+            String answer = generator.helloMessage("FIRST");
+            //String answer = generator.helloMessage("SECOND");
+            //String answer = generator.helloMessage("OTHER");
+            System.out.println("Answer 1:" + answer);
+        } catch (FirstException | SecondException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        }
+    }
+}
+
+package edu.javacourse.exception;
+ 
+public class Starter
+{
+    public static void main(String[] args)
+    {
+        Generator generator = new Generator();
+        
+        try {
+            String answer = generator.helloMessage("FIRST");
+            //String answer = generator.helloMessage("SECOND");
+            //String answer = generator.helloMessage("OTHER");
+            System.out.println("Answer 1:" + answer);
+        } catch (Exception ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (FirstException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (SecondException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        }
+    }
+}
+
+package edu.javacourse.exception;
+ 
+public class Starter
+{
+    public static void main(String[] args)
+    {
+        Generator generator = new Generator();
+        
+        try {
+            String answer = generator.helloMessage("FIRST");
+            //String answer = generator.helloMessage("SECOND");
+            //String answer = generator.helloMessage("OTHER");
+            System.out.println("Answer 1:" + answer);
+        } catch (FirstException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (SecondException ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println("Error message:" + ex.getMessage());
+        }
+    }
+}
+

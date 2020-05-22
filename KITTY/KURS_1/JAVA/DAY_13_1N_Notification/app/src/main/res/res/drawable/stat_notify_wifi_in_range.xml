@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200" android:drawable="@drawable/stat_notify_wifi_in_range0" />
+    <item android:duration="200" android:drawable="@drawable/stat_notify_wifi_in_range1" />
+    <item android:duration="200" android:drawable="@drawable/stat_notify_wifi_in_range2" />
+    <item android:duration="200" android:drawable="@drawable/stat_notify_wifi_in_range3" />
+    <item android:duration="200" android:drawable="@drawable/stat_notify_wifi_in_range4" />
+    <item android:duration="200" android:drawable="@drawable/stat_notify_wifi_in_range5" />
+</animation-list>

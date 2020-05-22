@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">База данных наших СОБАЧЕК (32_4)</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_new">Добавить</string>
+    <string name="action_edit">Изменить</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_clear">Удалить всех</string>
+
+    <string name="gender_unknown">Не знаю</string>
+    <string name="gender_male">Кобель</string>
+    <string name="gender_female">Сучка</string>
+
+    <string-array name="array_gender_option">
+        <item>@string/gender_male</item>
+        <item>@string/gender_female</item>
+        <item>@string/gender_unknown</item>
+    </string-array>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.velic.day_29_5_fragment.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/withButtonFragment"
+        android:name="com.example.velic.day_29_5_fragment.WithButtonFragment"
+        android:label="fragment_with_button"
+        tools:layout="@layout/fragment_with_button" >
+        <action
+            android:id="@+id/action_withButtonFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/withTextViewFragment"
+        android:name="com.example.velic.day_29_5_fragment.WithTextViewFragment"
+        android:label="fragment_with_text_view"
+        tools:layout="@layout/fragment_with_text_view" >
+        <action
+            android:id="@+id/action_withTextViewFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+</navigation>

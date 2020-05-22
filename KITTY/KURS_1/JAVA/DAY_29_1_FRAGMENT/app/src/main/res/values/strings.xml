@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">DAY_29_1_FRAGMENT</string>
+    <string name="Button1">Кура</string>
+    <string name="Button2">Собака</string>
+    <string name="Button3">Утка</string>
+</resources>

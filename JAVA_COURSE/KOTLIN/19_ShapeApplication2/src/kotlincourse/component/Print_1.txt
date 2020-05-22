@@ -1,0 +1,56 @@
+package edu.javacourse.ui.component;
+
+import java.awt.Graphics;
+import javax.swing.JComponent;
+
+public abstract class AbstractShape extends JComponent
+{
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        paintShape(g);
+    }
+
+    abstract protected void paintShape(Graphics g);
+}
+
+package edu.javacourse.ui.component;
+
+import java.awt.Graphics;
+
+// Класс для рисования овала
+public class OvalComponent extends AbstractShape
+{
+    @Override
+    protected void paintShape(Graphics g) {
+        g.drawOval(5, 5, getWidth() - 10, getHeight() - 10);
+    }
+}
+
+package edu.javacourse.ui.component;
+
+import java.awt.Graphics;
+
+// Класс для рисования прямоугольника
+public class RectangleComponent extends AbstractShape
+{
+    @Override
+    protected void paintShape(Graphics g) {
+        g.drawRect(5, 5, getWidth() - 10, getHeight() - 10);
+    }
+}
+
+package edu.javacourse.ui.component;
+
+import java.awt.Graphics;
+
+// Класс для рисования треугольника
+public class TriangleComponent extends AbstractShape
+{
+    @Override
+    protected void paintShape(Graphics g) {
+        g.drawLine(5, getHeight() - 10, getWidth() / 2 - 5, 5);
+        g.drawLine(getWidth() / 2 - 5, 5, getWidth() - 10, getHeight() - 10);
+        g.drawLine(getWidth() - 10, getHeight() - 10, 5, getHeight() - 10);
+    }
+}

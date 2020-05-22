@@ -1,0 +1,164 @@
+package edu.javacourse.robot;
+
+import java.util.ArrayList;
+
+public class Robot
+{
+    private double x = 0;
+    private double y = 0;
+    protected double course = 0;
+    private ArrayList<RobotLine> lines = new ArrayList<RobotLine>();
+    // Ссылка на слушателя событий от робота
+    // Обратите внимание, что это ссылка на ИНТЕРФЕЙС
+    private RobotListener listener;
+    
+    public Robot(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    // Метод для установки реального слушателя.
+    public void setListener(RobotListener listener) {
+        this.listener = listener;
+    }
+    
+    public void forward(int distance) {
+        // Вызываем слушателя (если он установлен) в начале
+        if(listener !=null) {
+            listener.startMove(x, y);
+        }
+        // Запоминаем координаты робота перед перемещением
+        final double xOld = x;
+        final double yOld = y;
+        // Меняем координаты
+        x += distance * Math.cos(course / 180 * Math.PI);
+        y += distance * Math.sin(course / 180 * Math.PI);
+
+        // Вызываем слушателя (если он установлен) после остановки
+        if(listener !=null) {
+            listener.endMove(x, y);
+        }
+
+        // Запоминаем координаты пройденного пути в списке
+        // Класс List позволяет добавить объект и хранить его
+        lines.add(new RobotLine(xOld, yOld, x, y));
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getCourse() {
+        return course;
+    }
+
+    public void setCourse(double course) {
+        this.course = course;
+    }
+
+    public ArrayList<RobotLine> getLines() {
+        return lines;
+    }
+}
+
+package edu.javacourse.robot;
+
+// Класс для хранения одной линии, которую проехал робот
+public class RobotLine
+{
+    private double x1;
+    private double y1;
+    private double x2;
+    private double y2;
+
+    public RobotLine(double x1, double y1, double x2, double y2) {
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+
+    public double getX1() {
+        return x1;
+    }
+
+    public double getY1() {
+        return y1;
+    }
+
+    public double getX2() {
+        return x2;
+    }
+
+    public double getY2() {
+        return y2;
+    }
+}
+
+package edu.javacourse.robot;
+
+/**
+ * Интерфейс слушателя событий от робота
+ */
+public interface RobotListener
+{
+    // Метод будет вызываться в момент начала движения
+    public void startMove(double x, double y);
+    // Метод будет вызываться в момент окончания движения
+    public void endMove(double x, double y);
+}
+
+package edu.javacourse.robot;
+
+import edu.javacourse.robot.ui.RobotFrame;
+import javax.swing.JFrame;
+
+public class RobotManager
+{
+
+    public static void main(String[] args)
+    {
+        // Количество сторон многоугольника
+        final int COUNT = 4;
+        // Длина стороны
+        final int SIDE = 100;
+
+        Robot robot = new Robot(200, 50);
+        // Установка слушателя для робота
+        SimpleRobotListener srl = new SimpleRobotListener();
+        robot.setListener(srl);
+        // Создаем замкнутую фигуру с количеством углов COUNT
+        for (int i = 0; i < COUNT; i++) {
+            robot.forward(SIDE);
+            robot.setCourse(robot.getCourse() + 360 / COUNT);
+        }
+
+        // Создаем форму для отрисовки пути нашего робота
+        RobotFrame rf = new RobotFrame(robot);
+        rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        rf.setVisible(true);
+    }
+}
+
+package edu.javacourse.robot;
+
+// Наш класс реализует интерфейс robotListener
+public class SimpleRobotListener implements RobotListener
+{
+
+    @Override
+    public void startMove(double x, double y)
+    {
+        System.out.println("Робот начал движение, координаты:" + x + "," + y);
+    }
+
+    @Override
+    public void endMove(double x, double y)
+    {
+        System.out.println("Робот закончил движение, координаты:" + x + "," + y);
+    }
+}

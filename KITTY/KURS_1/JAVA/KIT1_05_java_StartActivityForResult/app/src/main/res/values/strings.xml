@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KIT1_05_java_StartActivityForResult</string>
+
+    <string name="who">Кто украл два кусочека колбаски?</string>
+</resources>

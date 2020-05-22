@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">KIT1_05_kotlin_Filtr_manifest</string>
+    <string name="about_title">О программе</string>
+    <string name="birthday_title">День рождения Лены </string>
+    <string name="about_text">
+        У лукоморья дуб зеленый;\n
+        Златая цепь на дубе том:\n
+        И днем и ночью <b>кот ученый</b>\n
+        Всё ходит по цепи кругом;\n
+        Идет <b>направо</b> - песнь заводит, \n
+        <b>Налево</b> - сказку говорит.
+    </string>
+    <string name="title_activity_birthday">BirthdayActivity</string>
+    <string name="Send_button">ПЕРЕДАТЬ</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="Birrthday">Скоро у Лены день рождения!</string>
+</resources>

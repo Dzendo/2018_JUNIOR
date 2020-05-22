@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "ru.afalina.day_33_1_googleplay"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    /*signingConfigs {
+        config {
+            storeFile file('D:\\2018\\SCHOOL\\aaaaaaa_key_store.jks')
+            storePassword System.getenv('aaaaaaa')
+            keyAlias = 'bbb'
+            keyPassword System.getenv('bbbbbbb')
+        }
+    }*/
+    signingConfigs {
+        config {
+            keyAlias '720'
+            keyPassword '9037200055'
+            storeFile file('D:/2018/SCHOOL/Afaline_key_store.jks')
+            storePassword '9037292652'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+}

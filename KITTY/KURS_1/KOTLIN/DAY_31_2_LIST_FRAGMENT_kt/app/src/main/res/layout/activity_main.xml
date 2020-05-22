@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@android:layout/list_content"
+        android:name="com.example.day_31_2_list_fragment_k.SingleListFragment_4">
+
+    </fragment>
+<!--
+       1 - просто список со cтандартной разметкой без xml и без курсора
+       2 - просто список со  своей разметкой в listfragment.xml с выбором
+       2 - подключили слушатель выбора и сообщение что выбрали
+       4 - настроили вид каждого элемента - добавили значок
+       для этого сделали свою listfragment_row и свой listadapter myListAdapter
+-->
+
+</LinearLayout>

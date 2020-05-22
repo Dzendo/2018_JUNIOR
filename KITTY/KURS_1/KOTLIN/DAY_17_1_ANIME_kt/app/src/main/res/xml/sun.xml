@@ -1,0 +1,30 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<!--actions -->
+    <!--    Example Action -->
+    <!--    <action intentName="Intent name (actions.intent.*)"> -->
+    <!--        <action-display -->
+    <!--            icon="@mipmap/..." -->
+    <!--            labelTemplate="@array/..." /> -->
+    <!--        <fulfillment urlTemplate="Action content URI or URL"> -->
+    <!--            <parameter-mapping -->
+    <!--                intentParameter="Parameter name in Intent URI" -->
+    <!--                urlParameter="Parameter name in URL" /> -->
+    <!--        </fulfillment> -->
+    <!--    </action> -->
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:dither="true"
+        android:shape="oval" >
+
+        <gradient
+            android:endColor="#ffff6600"
+            android:gradientRadius="150"
+            android:startColor="#ffffcc00"
+            android:type="radial"
+            android:useLevel="false" />
+
+        <size
+            android:height="150dp"
+            android:width="150dp" />
+
+    </shape>
+<!-- /actions -->
