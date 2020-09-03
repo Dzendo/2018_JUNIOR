@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+// вообще-то неверно: здесь android, а  в градле и XML androidx
+
 public class MainActivity extends Activity {
 
     static final private int CHOOSE_THIEF =1;

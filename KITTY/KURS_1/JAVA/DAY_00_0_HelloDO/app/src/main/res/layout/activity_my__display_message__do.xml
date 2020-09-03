@@ -13,5 +13,6 @@
         android:layout_height="wrap_content"
         android:text="Второй экран"
         tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="415dp" />
+        tools:layout_editor_absoluteY="415dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

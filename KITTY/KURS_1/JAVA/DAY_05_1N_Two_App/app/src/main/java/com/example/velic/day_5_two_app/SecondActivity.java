@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.widget.TextView;
 
-public class SecondActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,11 +1,12 @@
 package com.example.velic.hellodo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class MY_DisplayMessageActivity_DO extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MY_DisplayMessageActivity_DO extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

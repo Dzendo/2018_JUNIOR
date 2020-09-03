@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             constraintLayout.background =  getDrawable(R.color.greenColor)
         }
         // Только для JAVA 8 :
-        buttonYellow.setOnClickListener{ v ->
+        buttonYellow.setOnClickListener{ _ ->
             title = "Светофор Лямбда"
             textView.text = getString(R.string.yellow)
             constraintLayout.background =  getDrawable(R.color.yellowColor)

@@ -1,20 +1,16 @@
 package com.example.velic.vorona;
 
-import android.app.Activity;
-/*-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-*/
+//import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-//import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends Activity {
-//public class MainActivity extends AppCompatActivity {
+
+//public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     private Button mCrowsCounterButton;
     private Button mCatsCounterButton;
     private TextView helloTextView;

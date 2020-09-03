@@ -1,10 +1,8 @@
 package com.example.velic.day_5_two_app;
 
-import android.app.Activity;
-import android.content.Context;
+//import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +11,17 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.snackbar.Snackbar;
-// implementation 'com.android.support:design:28.0.1' вставил в build grsdle
+//import com.google.android.material.snackbar.Snackbar;
+// implementation 'com.android.support:design:28.0.1' вставил в build gradle
 
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +39,7 @@ public class MainActivity extends Activity {
         //toast.show();
         Toast.makeText(MainActivity.this, "Прощай, День Рождения", Toast.LENGTH_SHORT).show();
 
-    };
+    }
 
 
     public void OnClick_Send(View view) {

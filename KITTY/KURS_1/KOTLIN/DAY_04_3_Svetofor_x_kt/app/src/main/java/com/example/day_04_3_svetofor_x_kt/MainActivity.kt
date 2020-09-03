@@ -12,13 +12,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         buttonGreen.setOnClickListener{
-            setTitle("Светофор listener")
+            title = "Светофор listener"
             textView.text = getText(R.string.green)
-            constraintLayout.background =  getDrawable(R.color.greenColor)
+            //constraintLayout.background =  getDrawable(R.color.greenColor)
+            //constraintLayout.setBackgroundColor(getColor(R.color.greenColor))
+            constraintLayout.setBackgroundResource(R.color.greenColor)
+
         }
         // Только для JAVA 8 :
-        buttonYellow.setOnClickListener{ v ->
-            setTitle("Светофор Лямбда")
+        buttonYellow.setOnClickListener{ _ ->
+            title = "Светофор Лямбда"
             textView.text = getString(R.string.yellow)
             constraintLayout.background =  getDrawable(R.color.yellowColor)
         }
@@ -26,21 +29,36 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onRedButtonClick(view: View) {
-        setTitle("Светофор Fun")
+        title = "Светофор Fun"
         textView.text = getText(R.string.red)
         constraintLayout.background =  getDrawable(R.color.redColor)
 
     }
 
     fun onYellowButtonClick(view: View) {
-        setTitle("Светофор Fun")
+        title = "Светофор Fun"
         textView.text = getText(R.string.yellow)
         constraintLayout.background =  getDrawable(R.color.yellowColor)
     }
 
     fun onGreenButtonClick(view: View) {
-        setTitle("Светофор Fun")
+        title = "Светофор Fun"
         textView.text = getText(R.string.green)
         constraintLayout.background =  getDrawable(R.color.greenColor)
+    }
+    fun onButtonClick(view: View) {  // доделать, а то как то не так
+        when (view) {
+            buttonRED -> {
+                title = "Светофор Fun"
+                textView.text = getText(R.string.red)
+                constraintLayout.background = getDrawable(R.color.redColor) }
+            buttonYellow -> {title = "Светофор Fun"
+                textView.text = getText(R.string.yellow)
+                constraintLayout.background =  getDrawable(R.color.yellowColor) }
+            buttonGreen -> {title = "Светофор Fun"
+                textView.text = getText(R.string.green)
+                constraintLayout.background =  getDrawable(R.color.greenColor)  }
+            else -> {}
+        }
     }
 }

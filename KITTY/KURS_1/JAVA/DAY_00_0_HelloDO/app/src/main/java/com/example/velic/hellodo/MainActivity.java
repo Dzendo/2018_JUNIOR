@@ -1,13 +1,14 @@
 package com.example.velic.hellodo;
 
 
-import android.content.Intent; // подключаем класс Intent
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View; // подключаем класс View для обработки нажатия кнопки
-import android.widget.EditText; // подключаем класс EditText
+import android.view.View;
+import android.widget.EditText;
 
-public class MainActivity extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
 
     public final static String EXTRA_MESSAGE = "EXTRA_MESSAGE";
     @Override
@@ -30,7 +31,4 @@ public class MainActivity extends Activity {
         // запуск activity
         startActivity(intent);
     }
-
-
-
 }
