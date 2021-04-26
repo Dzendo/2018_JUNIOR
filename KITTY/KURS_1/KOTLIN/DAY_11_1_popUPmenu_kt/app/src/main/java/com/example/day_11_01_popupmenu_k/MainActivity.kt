@@ -1,31 +1,32 @@
 package com.example.day_11_01_popupmenu_k
 
 import android.os.Bundle
-import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.day_11_01_popupmenu_k.databinding.ActivityMainBinding
+
+//import kotlinx.android.synthetic.main.activity_main.*
 
 
 
 
 class MainActivity : AppCompatActivity() {
-
-    internal var viewClickListener = View.OnClickListener { v -> showPopupMenu(v) }
+    private lateinit var mainBinding: ActivityMainBinding
+    private var viewClickListener = View.OnClickListener { v -> showPopupMenu(v) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        // Надувает главный экран из своего activity_sky.xml и запоминает адрес в переменной
+        setContentView(mainBinding.root)
 
-        button.setOnClickListener(viewClickListener)
-        textView.setOnClickListener(viewClickListener)
-        imageView.setOnClickListener(viewClickListener)
+        mainBinding.button.setOnClickListener(viewClickListener)
+        mainBinding.textView.setOnClickListener(viewClickListener)
+        mainBinding.imageView.setOnClickListener(viewClickListener)
     }
 
     private fun showPopupMenu(v: View) {

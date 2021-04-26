@@ -5,19 +5,20 @@ import android.view.View
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import com.example.day_30_1_alert_dialog_k.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        // Надувает главный экран из своего activity_sky.xml и запоминает адрес в переменной
+        setContentView(mainBinding.root)
     }
         // Диалог с одной кнопкой
     fun onClickDialogButton1(view: View) {
         val manager = supportFragmentManager
-        val myDialogFragment = MyDialogFragment()
+        val myDialogFragment = MyDialogFragment1()
         myDialogFragment.show(manager, "dialog")
 
     }
@@ -91,6 +92,34 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "Правильно, там одни негры!",
                 Toast.LENGTH_LONG).show()
 
+    }
+    fun onClick9(view: View) {
+        val manager = supportFragmentManager
+        val myDialogFragment = MyDialogFragment9()
+        myDialogFragment.show(manager, "dialog")
+    }
+    fun onClick10(view: View) {
+        val manager = supportFragmentManager
+        val myDialogFragment = MyDialogFragment10()
+        myDialogFragment.show(manager, "dialog")
+    }
+    fun onClick11(view: View) {
+        val manager = supportFragmentManager
+        val myDialogFragment = MyDialogFragment11()
+        myDialogFragment.show(manager, "dialog")
+    }
+    fun onClick12(view: View) {
+        val url = "https://d2zkmv5t5kao9.cloudfront.net/images/b905a618b56c721ce683164259ac02c4.jpeg?w=640&h=480"
+        val manager = supportFragmentManager
+        val myDialogFragment = MyDialogFragment12(url)
+        myDialogFragment.show(manager, "dialog")
+    }
+    fun onClick13(view: View) {
+        val uri = "//d2zkmv5t5kao9.cloudfront.net/images/5ce160bf580717f540be3e725753d802.png?w=640&h=480"
+        //val uri = "//d2zkmv5t5kao9.cloudfront.net/images/b905a618b56c721ce683164259ac02c4.jpeg?w=640&h=480"
+        val manager = supportFragmentManager
+        val myDialogFragment = MyDialogFragment13(uri)
+        myDialogFragment.show(manager, "dialog")
     }
     //алерт диалог не закрывает
 }

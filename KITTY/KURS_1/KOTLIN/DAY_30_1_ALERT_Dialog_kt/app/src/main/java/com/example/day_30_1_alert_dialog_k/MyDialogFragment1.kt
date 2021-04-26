@@ -2,11 +2,10 @@ package com.example.day_30_1_alert_dialog_k
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
   //Диалог с одной кнопкой
-class MyDialogFragment : DialogFragment() {
+class MyDialogFragment1 : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity)
         builder.setTitle("Важное сообщение!")

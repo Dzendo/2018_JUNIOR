@@ -1,51 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/gridLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:columnCount="2"
-    android:rowCount="3"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/imageButtonCow"
-        android:src="@drawable/cow"
-        android:onClick="onClick"
-        style="@style/animal" />
+    <GridLayout
 
-    <ImageButton
-        android:id="@+id/imageButtonChicken"
-        style="@style/animal"
-        android:onClick="onClick"
-        android:src="@drawable/chicken" />
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:rowCount="3"
+        tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButtonCat"
-        android:src="@drawable/cat"
-        android:onClick="onClick"
-        style="@style/animal" />
+        <ImageButton
+            android:id="@+id/imageButtonCow"
+            style="@style/animal"
+            android:tag="Cow.mp3"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/cow" />
 
-    <ImageButton
-        android:id="@+id/imageButtonDuck"
-        android:src="@drawable/duck"
-        android:onClick="onClick"
-        style="@style/animal" />
+        <ImageButton
+            android:id="@+id/imageButtonChicken"
+            style="@style/animal"
+            android:tag="t_chicken.mp3"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/chicken" />
 
-    <ImageButton
-        android:id="@+id/imageButtonSheep"
-        android:src="@drawable/sheep"
-        android:onClick="onClick"
-        style="@style/animal" />
+        <ImageButton
+            android:id="@+id/imageButtonCat"
+            style="@style/animal"
+            android:tag="cat.ogg"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/cat" />
 
-    <ImageButton
-        android:id="@+id/imageButtonDog"
-        android:src="@drawable/dog"
-        android:onClick="onClick"
-        style="@style/animal" />
+        <ImageButton
+            android:id="@+id/imageButtonDuck"
+            style="@style/animal"
+            android:tag="duck.ogg"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/duck" />
 
+        <ImageButton
+            android:id="@+id/imageButtonSheep"
+            style="@style/animal"
+            android:tag="sheep.ogg"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/sheep" />
 
-</GridLayout>
+        <ImageButton
+            android:id="@+id/imageButtonDog"
+            style="@style/animal"
+            android:tag="dog.ogg"
+            android:onClick="onClick"
+            android:scaleType="fitXY"
+            android:src="@drawable/dog" />
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/SoundPool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="mysound"
+            android:onClick="onClickVariant"
+            android:text="SoundPool" />
+
+        <Button
+            android:id="@+id/MediaPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickVariant"
+            android:text="MediaPlayer" />
+
+        <Button
+            android:id="@+id/MediaPlayerAsset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="playMediaPlayerAsset"
+            android:text="MediaPlayerAsset" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/MediaPlayerURI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickURI"
+            android:text="MediaPlayerURI" />
+
+        <Button
+            android:id="@+id/MediaPlayerHTTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tag="mysound"
+            android:onClick="onClickHTTP"
+            android:text="MediaPlayerHTTP" />
+
+    </LinearLayout>
+</LinearLayout>

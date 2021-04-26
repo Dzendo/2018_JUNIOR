@@ -148,7 +148,7 @@ public class MainActivity_java extends AppCompatActivity {
         // получим идентификаторы
         mCatSound = loadSound("cat.ogg");
         mChickenSound = loadSound("t_chicken.mp3");
-        mCowSound = loadSound("Cow.mp3");
+        mCowSound = loadSound("cow.mp3");
         mDogSound = loadSound("dog.ogg");
         mDuckSound = loadSound("duck.ogg");
         mSheepSound = loadSound("sheep.ogg");

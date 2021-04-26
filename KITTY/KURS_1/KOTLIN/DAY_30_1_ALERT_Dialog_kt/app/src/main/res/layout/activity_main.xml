@@ -111,4 +111,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
 
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:onClick="onClick9"
+        android:text="AlertDialog с картинкой URL picasso c XML"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:onClick="onClick10"
+        android:text="AlertDialog с картинкой URL Glide c XML"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:onClick="onClick11"
+        android:text="AlertDialog с картинкой URL Glide из XML"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:onClick="onClick12"
+        android:text="AlertDialog с картинкой URL Glide Котлин"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:onClick="onClick13"
+        android:text="AlertDialog с картинкой URI Glide Котлин"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

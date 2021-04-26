@@ -14,7 +14,7 @@ class MyDialogFragment6 : DialogFragment() {
         val catNamesArray = arrayOf("Васька", "Рыжик", "Мурзик")
         val checkedItemsArray = booleanArrayOf(false, true, false)
 
-        val builder = AlertDialog.Builder(activity!!)
+        val builder = AlertDialog.Builder(requireActivity())
         builder.setTitle("Выберите котов")
                 .setMultiChoiceItems(catNamesArray, checkedItemsArray
                 ) { dialog, which, isChecked -> checkedItemsArray[which] = isChecked }

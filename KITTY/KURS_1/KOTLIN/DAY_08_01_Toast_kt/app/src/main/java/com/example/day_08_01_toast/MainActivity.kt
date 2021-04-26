@@ -5,24 +5,25 @@ import android.os.Handler
 import android.os.Looper
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 
-import com.example.day_08_01_toast.R.string.*
-import com.example.day_08_01_toast.R.drawable.*
-import com.example.day_08_01_toast.R.layout.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.custom_layout.*
+import com.example.day_08_01_toast.databinding.ActivityMainBinding
+import com.example.day_08_01_toast.databinding.CustomLayoutBinding
+import com.squareup.picasso.Picasso
+//import kotlinx.android.synthetic.main.custom_layout.*
+
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var mainBinding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        // Надувает главный экран из своего activity_sky.xml и запоминает адрес в переменной
+        setContentView(mainBinding.root)
     }
 
     fun showToast1(view: View) {
@@ -31,42 +32,56 @@ class MainActivity : AppCompatActivity() {
                 //.gravity(Gravity.CENTER,0,0)
                // .setGravity(Gravity.CENTER,0,0)
                // .show()
-
-
-
     }
         fun showToast2(view: View) {
             val duration = Toast.LENGTH_LONG;
-            val toast :  Toast
-             toast = Toast.makeText(applicationContext,
-                //    R.string.show_toast,
-                     show_toast,
+            val toast:Toast = Toast.makeText(applicationContext,
+                R.string.show_toast,
                     duration);
             toast.setGravity(Gravity.TOP, 0, 0);
             toast.show();
         }
     // Добавляем картинку
     fun showToast3(view: View) {
-        val toast = Toast.makeText(applicationContext,show_toast, Toast.LENGTH_LONG)
+
+        val toast = Toast.makeText(applicationContext,R.string.show_toast, Toast.LENGTH_LONG)
             toast.setGravity(Gravity.CENTER, 0, 0)
         val toastContainer = toast.view as LinearLayout
         val catImageView = ImageView(applicationContext)
-            catImageView.setImageResource(soley)
-            //ImageView(applicationContext).setImageResource(soley)
-            //(toast.view as LinearLayout).addView(catImageView, 0)
+            catImageView.setImageResource(R.drawable.soley)
             toastContainer.addView(catImageView, 0)
             toast.show()
+
     }
     // Создание собственных всплывающих уведомлений
     fun showToast4(view: View) {
         val toast = Toast(applicationContext)
             toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
             toast.duration = Toast.LENGTH_LONG
-            toast.view = layoutInflater.inflate(custom_layout,toast_layout)
+            toast.view = CustomLayoutBinding.inflate(layoutInflater).toastLayout
             toast.show()
     }
 
-    fun showToast_thread(view: View) {
+    fun showToast5(view: View) {
+        val skyToast = Toast.makeText(applicationContext, "Chair --> Стул", Toast.LENGTH_LONG)
+        skyToast.setGravity(Gravity.CENTER, 0, 0)
+        val skyToastContainer = skyToast.view as LinearLayout
+        skyToastContainer.minimumWidth = 1280
+        val skyImageView = ImageView(applicationContext)
+        val url = "https://d2zkmv5t5kao9.cloudfront.net/images/b905a618b56c721ce683164259ac02c4.jpeg?w=640&h=480"
+        Picasso.with(applicationContext)
+            .load(url)
+            .placeholder(R.drawable.ic_launcher_foreground) //    .user_placeholder)
+            .error(R.drawable.ic_launcher_foreground) // .user_placeholder_error)
+            .resize(1280, 960 )
+            .into(skyImageView)
+        Thread.sleep(1000) // Костыль
+        skyToastContainer.addView(skyImageView, 0)
+        //Thread.sleep(1000)
+        skyToast.show()
+    }
+
+        fun showToast_thread(view: View) {
         mainProcessing()
     }
 
