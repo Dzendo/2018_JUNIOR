@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageChair"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        app:imageUrl='@{"//d2zkmv5t5kao9.cloudfront.net/images/b905a618b56c721ce683164259ac02c4.jpeg?w=640&amp;h=480"}'
+        tools:srcCompat="@drawable/effel"
+        />
+        <!--app:imageUrl="https://d2zkmv5t5kao9.cloudfront.net/images/b905a618b56c721ce683164259ac02c4.jpeg?w=640&amp;h=480" /-->
+
+</LinearLayout>
+    </layout>
