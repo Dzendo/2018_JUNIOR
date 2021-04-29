@@ -7,7 +7,6 @@ import androidx.fragment.app.DialogFragment
 import android.widget.ImageView
 import androidx.core.net.toUri
 import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 
 
 // AlertDialog Kotlin URI
