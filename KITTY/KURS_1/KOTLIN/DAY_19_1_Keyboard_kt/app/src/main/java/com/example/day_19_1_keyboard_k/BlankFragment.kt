@@ -31,7 +31,7 @@ class BlankFragment : DialogFragment() {
 
         // Request focus and show soft keyboard automatically
         txt_yourName.requestFocus()
-        dialog.window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
+        dialog?.window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
         // Когда элемент EditText получает фокус, то появляется клавиатура. Можно установить нужный вид клавиатуры через атрибут InputType или программно через метод setInputType():
 
         val ipt = txt_yourName //new EditText(this);

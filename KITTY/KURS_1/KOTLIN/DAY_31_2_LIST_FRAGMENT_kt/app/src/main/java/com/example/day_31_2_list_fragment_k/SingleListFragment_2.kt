@@ -25,9 +25,12 @@ class SingleListFragment_2 : ListFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         // создаем новый адаптер со стандартной разметкой и ссылкой на массив catNames
-        val adapter = ArrayAdapter(activity,
-             //   android.R.layout.simple_list_item_1, catNames)
+        val adapter = activity?.let {
+            ArrayAdapter(
+                it.applicationContext,
+                //   android.R.layout.simple_list_item_1, catNames)
                 android.R.layout.simple_list_item_activated_1, catNames)
+        }
         listAdapter = adapter
         //  java: setListAdapter(adapter); связываем адапртер с массивом
         // если не связать - не будет списка и будет empty - по умолчанию

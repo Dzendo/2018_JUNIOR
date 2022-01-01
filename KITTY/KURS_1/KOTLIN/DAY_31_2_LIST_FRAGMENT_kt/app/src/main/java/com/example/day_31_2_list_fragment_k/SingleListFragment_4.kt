@@ -37,9 +37,12 @@ class SingleListFragment_4 : ListFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         // создаем новый адаптер со стандартной разметкой и ссылкой на массив catNames
-        val adapter = ArrayAdapter(activity,
-             //   android.R.layout.simple_list_item_1, catNames)
+        val adapter = activity?.let {
+            ArrayAdapter(
+                it.applicationContext,
+                //   android.R.layout.simple_list_item_1, catNames)
                 android.R.layout.simple_list_item_activated_1, catNames)
+        }
         listAdapter = adapter
         //  java: setListAdapter(adapter); связываем адапртер с массивом
         // если не связать - не будет списка и будет empty - по умолчанию
@@ -75,7 +78,7 @@ class SingleListFragment_4 : ListFragment() {
     }
 
     inner class MyListAdapter(private val mContext: Context?, textViewResourceId: Int,
-          objects: Array<String>) : ArrayAdapter<String>(mContext, textViewResourceId, objects) {
+          objects: Array<String>) : ArrayAdapter<String>(mContext!!, textViewResourceId, objects) {
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             // return super.getView(position, convertView, parent);

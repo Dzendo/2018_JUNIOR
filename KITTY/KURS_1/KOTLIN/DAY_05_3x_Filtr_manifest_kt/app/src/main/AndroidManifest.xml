@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +27,8 @@
 
         <activity
             android:name=".SecondActivity"
-            android:label="@string/title_activity_second" >
+            android:label="@string/title_activity_second"
+            android:exported="false">
         <intent-filter >
             <action android:name="com.example.velic.day_05_3x_filtr_manifest.SecondActivity" />
             <category android:name="android.intent.category.DEFAULT" />
@@ -34,7 +36,8 @@
         </activity>
         <activity
             android:name=".ThirdActivity"
-            android:label="@string/title_activity_third">
+            android:label="@string/title_activity_third"
+            android:exported="false">
             <intent-filter >
                 <action android:name="com.example.velic.day_05_3x_filtr_manifest.SecondActivity" />
                 <category android:name="android.intent.category.DEFAULT" />

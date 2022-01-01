@@ -39,7 +39,7 @@ class MyDialogFragment10 : DialogFragment() {
         Glide
             .with(requireActivity())
             .load(url)
-            .thumbnail(thumbnailRequest)  // для превью
+           // .thumbnail(thumbnailRequest)  // для превью
             .override(1280, 960)
             .into(binding.imageChair)
 

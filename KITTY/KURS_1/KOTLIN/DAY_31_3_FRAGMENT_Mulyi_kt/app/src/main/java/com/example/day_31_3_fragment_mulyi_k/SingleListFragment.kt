@@ -23,8 +23,11 @@ class SingleListFragment : ListFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         // создаем новый адаптер со стандартной разметкой и ссылкой на массив catNames
-        val adapter = ArrayAdapter(activity,
+        val adapter = activity?.let {
+            ArrayAdapter(
+                it.applicationContext,
                 android.R.layout.simple_list_item_multiple_choice, catNames)
+        }
         listAdapter = adapter
         //  java: setListAdapter(adapter); связываем адапртер с массивом
     }
@@ -35,7 +38,7 @@ class SingleListFragment : ListFragment() {
         // затем прямо поверх-вместо стандартной разметки загружаем свою из xml
     }
 
-    override fun onListItemClick(l: ListView?, v: View?, position: Int, id: Long) {
+    override fun onListItemClick(l: ListView, v: View, position: Int, id: Long) {
         super.onListItemClick(l, v, position, id)
         // Шаг 3 подключение через стандартный слушатель onListItemClick
 
